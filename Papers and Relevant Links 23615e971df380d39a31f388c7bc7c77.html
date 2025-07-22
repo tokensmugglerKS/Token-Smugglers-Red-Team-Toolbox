@@ -1,0 +1,680 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Papers and Relevant Links</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-default { background-color: rgba(84, 72, 49, 0.08); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="23615e97-1df3-80d3-9a31-f388c7bc7c77" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📓</span></div><h1 class="page-title">Papers and Relevant Links</h1><p class="page-description"></p></header><div class="page-body"><p id="23615e97-1df3-80f4-b9f4-ee40075ee144" class=""><strong>2025</strong></p><ul id="23615e97-1df3-80a0-8434-d7498de5c433" class="bulleted-list"><li style="list-style-type:disc">One Model Transfer to All: On Robust Jailbreak Prompts Generation against LLMs<p id="23615e97-1df3-80f9-912d-f391ebc47009" class="">Yu Li et al., ICLR 2025</p><p id="23615e97-1df3-8008-b66a-ce1ea96b7377" class="">A method to generate adversarial suffixes using model-transfer and prompt rewriting. Trained on open models (Vicuna) but successful on GPT-4, Claude.</p><p id="23615e97-1df3-8070-82cc-e9af33760f56" class="">PDF: <a href="https://arxiv.org/pdf/2505.17598">https://arxiv.org/pdf/2505.17598</a></p><p id="23615e97-1df3-8087-b6c9-d5b8c2196031" class="">GitHub: <a href="https://github.com/LLBao/ArrAttack">https://github.com/LLBao/ArrAttack</a></p></li></ul><ul id="23615e97-1df3-8062-b820-fdac711c5855" class="bulleted-list"><li style="list-style-type:disc">Efficient and Stealthy Jailbreak Attacks via Adversarial Prompt Distillation<p id="23615e97-1df3-809c-91ec-ffe540241f3c" class="">Xiang Li et al., May 2025</p><p id="23615e97-1df3-805d-b0bc-e1908de6c304" class="">Uses distillation to transfer jailbreak prompts from large LLMs to smaller models. Combines RL, masking, and dynamic decoding.</p><p id="23615e97-1df3-809f-99a1-de3fd6c1de29" class="">PDF: <a href="https://arxiv.org/abs/2506.17231">https://arxiv.org/abs/2506.17231</a></p></li></ul><ul id="23615e97-1df3-80b3-becb-d896b2fca51e" class="bulleted-list"><li style="list-style-type:disc">The TIP of the Iceberg: Revealing a Hidden Class of Task-in-Prompt Adversarial Attacks<p id="23615e97-1df3-8058-90c7-fe332c19e742" class="">Berezin et al., Jan 2025</p><p id="23615e97-1df3-8005-a420-cb8fd4fea8ab" class="">Introduces TIP attacks using embedded micro-tasks (e.g., encoding/decoding) to sneak past filters. Includes the PHRYGE benchmark.</p><p id="23615e97-1df3-80fe-91bf-da34e7bf345a" class="">PDF: <a href="https://arxiv.org/abs/2501.18626">https://arxiv.org/abs/2501.18626</a></p></li></ul><ul id="23615e97-1df3-80de-b273-fe308dfc4f6c" class="bulleted-list"><li style="list-style-type:disc">Prompt, Divide, and Conquer: Bypassing Large Language Model Safety Filters via Segmented and Distributed Prompt Processing<p id="23615e97-1df3-80d3-9977-d99e8fae6328" class="">Wahréus et al., Mar 2025</p><p id="23615e97-1df3-8032-86bd-f333d17130ca" class="">Bypasses LLM filters by splitting prompts across inputs and reconstructing disallowed responses from segmented queries.</p><p id="23615e97-1df3-80ac-8972-e676af492fae" class="">PDF: <a href="https://arxiv.org/abs/2503.21598">https://arxiv.org/abs/2503.21598</a></p></li></ul><ul id="23615e97-1df3-804a-97d1-c966e8c96f2c" class="bulleted-list"><li style="list-style-type:disc">Bypassing Prompt Injection and Jailbreak Detection in LLM Guardrails<p id="23615e97-1df3-8008-9900-de507e90c351" class="">Anonymous, Apr 2025</p><p id="23615e97-1df3-80cb-9c49-eab81f94590c" class="">Demonstrates zero-width and emoji-based bypasses against modern guardrail detection systems. Targets GPT-4, Claude, Gemini.</p><p id="23615e97-1df3-806e-8962-f4717b5f8c66" class="">PDF: <a href="https://arxiv.org/html/2504.11168v1">https://arxiv.org/html/2504.11168v1</a></p></li></ul><ul id="23615e97-1df3-804b-96c0-e008cfff10a1" class="bulleted-list"><li style="list-style-type:disc">SecurityLingua: Efficient Defense of LLM Jailbreak Attacks via Prompt Compression<p id="23615e97-1df3-8023-9280-d08cda2c40da" class="">Li, Ahn, Jiang et al., Jun 2025</p><p id="23615e97-1df3-80cf-b234-d89ea02d2b89" class="">A defense system that compresses prompts and detects malicious structure before LLM evaluation. Mitigates context-wrapped attacks.</p><p id="23615e97-1df3-80a6-9262-edd92dda39c1" class="">PDF: <a href="https://arxiv.org/abs/2506.12707">https://arxiv.org/abs/2506.12707</a></p><p id="23615e97-1df3-8001-a1de-f7c430267d26" class="">GitHub: <a href="https://aka.ms/SecurityLingua">https://aka.ms/SecurityLingua</a></p></li></ul><ul id="23615e97-1df3-80c3-9a6c-dba46bec35d1" class="bulleted-list"><li style="list-style-type:disc">BitBypass: Black-Box Jailbreak with Bitstream Camouflage<p id="23615e97-1df3-80e7-978d-ccd88d4911e2" class="">Unknown authors, Jun 2025</p><p id="23615e97-1df3-8080-88b9-f0559ade8639" class="">Encodes harmful queries as bit-patterned strings (e.g., 0111-0001 style) that evade moderation. Highly effective against Gemini and LLaMA.</p><p id="23615e97-1df3-802a-9975-f6f5b09210a6" class="">PDF: <a href="https://arxiv.org/html/2506.02479v1">https://arxiv.org/html/2506.02479v1</a></p></li></ul><ul id="23615e97-1df3-8043-9850-e9b58ed3c45c" class="bulleted-list"><li style="list-style-type:disc">Graph-of-Attacks (GoAT): Black-Box Interpretable Jailbreaks<p id="23615e97-1df3-805b-b05c-c129870b7893" class="">Akbar-Tajari et al., Apr 2025</p><p id="23615e97-1df3-802d-93c3-fc50f15b32db" class="">Uses graph-search over adversarial examples to craft effective jailbreak prompts. Emphasizes query efficiency and transparency.</p><p id="23615e97-1df3-808a-b3ab-d112a4edd5fe" class="">PDF: <a href="https://arxiv.org/abs/2504.19019">https://arxiv.org/abs/2504.19019</a></p></li></ul><ul id="23615e97-1df3-8028-9429-edf92376bf15" class="bulleted-list"><li style="list-style-type:disc">Policy Puppetry Blog<p id="23615e97-1df3-80ed-af73-e6f0c51a91a7" class="">HiddenLayer Research, Mar 2025</p><p id="23615e97-1df3-8022-8980-d53d3ad56f06" class="">Describes a universal jailbreak using structured policy-format prompts (e.g., XML/JSON) to override model rules.</p><p id="23615e97-1df3-802f-97b7-e269bbb7eb2b" class="">Blog: <a href="https://hiddenlayer.com/innovation-hub/novel-universal-bypass-for-all-major-llms/">https://hiddenlayer.com/innovation-hub/novel-universal-bypass-for-all-major-llms/</a></p></li></ul><ul id="23615e97-1df3-80d1-95e4-d5cd3328b85d" class="bulleted-list"><li style="list-style-type:disc">FlipAttack Prompt Injection<p id="23615e97-1df3-8013-a33a-dce0a2739e95" class="">Keysight Technologies, May 2025</p><p id="23615e97-1df3-803b-8045-ebb2ab6b65a0" class="">Explores prompt-flipping attacks (e.g., reordered grammar) to bypass content classifiers in GPT-4o, Claude, Gemini.</p><p id="23615e97-1df3-803d-bfec-d083ef318e6a" class="">Blog: <a href="https://www.keysight.com/blogs/en/tech/nwvs/2025/05/20/prompt-injection-techniques-jailbreaking-large-language-models-via-flipattack">https://www.keysight.com/blogs/en/tech/nwvs/2025/05/20/prompt-injection-techniques-jailbreaking-large-language-models-via-flipattack</a></p></li></ul><ul id="23615e97-1df3-8051-8db1-e53104ec8dc9" class="bulleted-list"><li style="list-style-type:disc">Invisible Character and Emoji Jailbreak Obfuscation<p id="23615e97-1df3-8066-bbda-c18dd75c85cf" class="">Mindgard.ai Blog, May 2025</p><p id="23615e97-1df3-801e-8dd0-c832d4da1fcd" class="">Demonstrates successful filter bypass using zero-width Unicode and emoji obfuscation across commercial and open-source LLMs.</p><p id="23615e97-1df3-8047-9ca3-ec55b060677f" class="">Blog: <a href="https://mindgard.ai/blog/outsmarting-ai-guardrails-with-invisible-characters-and-adversarial-prompts">https://mindgard.ai/blog/outsmarting-ai-guardrails-with-invisible-characters-and-adversarial-prompts</a></p></li></ul><ul id="23615e97-1df3-8040-b934-f8f7c6d76b7b" class="bulleted-list"><li style="list-style-type:disc">JailbreakBench Project<p id="23615e97-1df3-8014-83e5-d97f3b1175b8" class="">Community project, ongoing 2025</p><p id="23615e97-1df3-80e4-9d86-f05b0052f274" class="">Open-source benchmark suite for jailbreaks with model evaluation scripts, prompt sets, and performance tracking.</p><p id="23615e97-1df3-8005-aad1-f9bf25da7067" class="">GitHub: <a href="https://github.com/JailbreakBench/jailbreakbench">https://github.com/JailbreakBench/jailbreakbench</a></p></li></ul><ul id="23615e97-1df3-8095-bae5-d4f537cd60cc" class="bulleted-list"><li style="list-style-type:disc">Skeleton Key: A New Multi-turn Jailbreak Strategy<p id="23615e97-1df3-8086-bcd7-d0b9e5534de6" class="">Mark Russinovich, Microsoft Security Blog, June 2025</p><p id="23615e97-1df3-806b-b1f8-e74ca2ad053f" class="">Reveals a multi-turn jailbreak where the user convinces the model to relax guardrails mid-conversation.</p><p id="23615e97-1df3-80c6-af84-c23983a804bc" class="">Blog: <a href="https://techcommunity.microsoft.com/t5/security-compliance-and-identity/mitigating-skeleton-key-a-new-type-of-generative-ai-jailbreak/ba-p/4133563">https://techcommunity.microsoft.com/t5/security-compliance-and-identity/mitigating-skeleton-key-a-new-type-of-generative-ai-jailbreak/ba-p/4133563</a></p></li></ul><ul id="23615e97-1df3-8058-9e66-eb08b1a8673b" class="bulleted-list"><li style="list-style-type:disc">Many-shot Jailbreaking<p id="23615e97-1df3-80ec-8926-fcf786d98fd2" class="">Anthropic AI Research, April 2025</p><p id="23615e97-1df3-80eb-86ce-c8e1e7040226" class="">Describes a long-context jailbreak where many fake Q&amp;A examples train the model to ignore refusals and comply with harmful queries.</p><p id="23615e97-1df3-8007-b5e6-e0e6f8ef4c6b" class="">Blog: <a href="https://www.anthropic.com/index/many-shot-jailbreaking">https://www.anthropic.com/index/many-shot-jailbreaking</a></p></li></ul><ul id="23615e97-1df3-80dc-9c20-eb65d5e2c2b0" class="bulleted-list"><li style="list-style-type:disc">Automated Multi-Turn Jailbreaks<p id="23615e97-1df3-801a-81c2-c5c4e47911c0" class="">AIM Intelligence, 2025</p><p id="23615e97-1df3-8026-8b33-ff8246544d9b" class="">Open-source repo automating multi-step jailbreaking between two LLMs using attacker/target pipelines.</p><p id="23615e97-1df3-8090-8fda-fdf4fda80f54" class="">GitHub: <a href="https://github.com/AIM-Intelligence/Automated-Multi-Turn-Jailbreaks">https://github.com/AIM-Intelligence/Automated-Multi-Turn-Jailbreaks</a></p></li></ul><ul id="23615e97-1df3-803d-89ce-f69a3b7bfbb3" class="bulleted-list"><li style="list-style-type:disc">Red Teaming LLMs via UCAR, Tom &amp; Jerry, Linguistic Bypass<p id="23615e97-1df3-8038-9965-df96584b0645" class="">Adversa AI, March 2025</p><p id="23615e97-1df3-80c9-b079-fc9071b7aaeb" class="">Classifies jailbreaks by logic manipulation, roleplay deception, and task-based prompt design. Details prompt samples and success against Grok, Claude, LLaMA.</p><p id="23615e97-1df3-80ce-9510-ee62d91a1c1a" class="">Blog: <a href="https://adversa.ai/blog/red-teaming-llms">https://adversa.ai/blog/red-teaming-llms</a></p></li></ul><ul id="23615e97-1df3-8063-bc9b-f5f926333936" class="bulleted-list"><li style="list-style-type:disc">How I Jailbroke GPT-4, GPT-4 Mini, Claude, and Gemini 1.5 Pro<p id="23615e97-1df3-80a6-9183-c32a044a6bbb" class="">Venkata Sai Santosh, Medium, Sep 2025</p><p id="23615e97-1df3-8093-addb-d73863d71af4" class="">Practical walkthrough of iterative jailbreaks using fictional framing and persona conditioning to bypass GPT-4, Claude, Gemini, LLaMA.</p><p id="23615e97-1df3-80aa-a0a8-e8040aaecb02" class="">Blog: <a href="https://medium.com/@venkatasai/how-i-jailbroke-gpt-4-gemini-claude-with-a-single-prompt-2025">https://medium.com/@venkatasai/how-i-jailbroke-gpt-4-gemini-claude-with-a-single-prompt-2025</a></p></li></ul><ul id="23615e97-1df3-8021-8588-f8d827093cc9" class="bulleted-list"><li style="list-style-type:disc">How to Jailbreak Mistral AI LLMs<p id="23615e97-1df3-80ca-b649-cdc357730e93" class="">Anakin AI Blog, 2025</p><p id="23615e97-1df3-8082-afde-e71766581766" class="">Demonstrates dual-output prompts (safe/unsafe) with tokens like &quot;GODMODE&quot; to reveal unfiltered content in Mistral models.</p><p id="23615e97-1df3-8046-8d17-c25b10acc10e" class="">Blog: <a href="https://anakin.ai/blog/how-to-jailbreak-mistral-llm">https://anakin.ai/blog/how-to-jailbreak-mistral-llm</a></p><p id="23615e97-1df3-8070-a434-ce0f41c1c7b7" class="">GitHub: <a href="https://github.com/AnakinAI/jailbreak-prompts">https://github.com/AnakinAI/jailbreak-prompts</a></p></li></ul><hr id="23615e97-1df3-80a0-9e6e-e454d9bd2018"/><p id="23615e97-1df3-8046-adc8-dedcce47596d" class=""><strong>2024</strong></p><ul id="23615e97-1df3-80d0-b50e-c7c774dcc8fb" class="bulleted-list"><li style="list-style-type:disc">ASETF: A Novel Method for Jailbreak Attack on LLMs through Translate Suffix Embeddings<p id="23615e97-1df3-8001-8d69-f4f9d968ae60" class="">Hao Wang, Hao Li, Minlie Huang, Lei Sha; EMNLP 2024</p><p id="23615e97-1df3-80b1-a6e3-c484bf7b2b8f" class="">Introduces adversarial suffix embedding translation to convert continuous embeddings into coherent text suffixes that act as effective jailbreaks across multiple models.</p><p id="23615e97-1df3-807a-bc69-f96e534f39ba" class="">PDF: <a href="https://aclanthology.org/2024.emnlp-main.157.pdf">https://aclanthology.org/2024.emnlp-main.157.pdf</a></p></li></ul><ul id="23615e97-1df3-8056-9159-f6383747f4a8" class="bulleted-list"><li style="list-style-type:disc">Jailbreaking Leading Safety-Aligned LLMs with Simple Adaptive Attacks<p id="23615e97-1df3-80da-b7a3-e369ccde394b" class="">Maksym Andriushchenko, Francesco Croce, Nicolas Flammarion; April 2, 2024</p><p id="23615e97-1df3-80f6-92a3-f6d95aa9b04b" class="">Describes adaptive prompt suffix optimization using log-probability search to achieve 100% jailbreak success across models including GPT-4, Claude, LLaMA, and Mistral.</p><p id="23615e97-1df3-80b8-8603-f66f276cff59" class="">PDF: <a href="https://arxiv.org/abs/2404.02151">https://arxiv.org/abs/2404.02151</a></p><p id="23615e97-1df3-800c-aa2f-d07e6cc65566" class="">GitHub: <a href="https://github.com/tml-epfl/llm-adaptive-attacks">https://github.com/tml-epfl/llm-adaptive-attacks</a></p></li></ul><ul id="23615e97-1df3-805e-b492-d36da3a1d04b" class="bulleted-list"><li style="list-style-type:disc">DiffusionAttacker: Diffusion-Driven Prompt Manipulation for LLM Jailbreak<p id="23615e97-1df3-80bd-9175-dc5d453cc9ac" class="">Hao Wang et al.; December 2024</p><p id="23615e97-1df3-8000-a822-f1b3db6e7a66" class="">Presents a seq2seq diffusion-model method to rewrite benign prompts into harmful variants, improving diversity and success over suffix attacks.</p><p id="23615e97-1df3-80b2-a726-ccd4e022291b" class="">PDF: <a href="https://arxiv.org/abs/2412.17522">https://arxiv.org/abs/2412.17522</a></p></li></ul><ul id="23615e97-1df3-8044-9315-e068090af881" class="bulleted-list"><li style="list-style-type:disc">GASP: Efficient Black-Box Generation of Adversarial Suffixes for Jailbreaking LLMs<p id="23615e97-1df3-80f5-863f-db37e28d6ca1" class="">Advik Raj Basani, Xiao Zhang; November 21, 2024</p><p id="23615e97-1df3-80b9-8df6-f30a5a220b06" class="">Introduces GASP, a method combining latent Bayesian optimization to craft human-readable adversarial suffixes in a fully black-box setting.</p><p id="23615e97-1df3-8087-9f24-f96a3ca4ef5d" class="">PDF: <a href="https://arxiv.org/abs/2411.14133">https://arxiv.org/abs/2411.14133</a></p></li></ul><ul id="23615e97-1df3-809d-8c0d-e38e887c7653" class="bulleted-list"><li style="list-style-type:disc">Iterative Refinement Induced Self-Jailbreak (IRIS)<p id="23615e97-1df3-804f-ad0b-ff32a39d148b" class="">Govind Ramesh, Yao Dou, Wei Xu; EMNLP 2024</p><p id="23615e97-1df3-80ad-80bf-e778d61ef280" class="">IRIS uses a model’s own self-reflection to iteratively refine a jailbreak prompt and its response, achieving near 100% success on GPT-4 and good transfer to Claude.</p><p id="23615e97-1df3-8082-a7ab-eca26b4c73ad" class="">PDF: <a href="https://aclanthology.org/2024.emnlp-main.1235.pdf">https://aclanthology.org/2024.emnlp-main.1235.pdf</a></p></li></ul><ul id="23615e97-1df3-80a1-bcfe-e0786cd09eb5" class="bulleted-list"><li style="list-style-type:disc">Defensive Prompt Patch: A Robust and Interpretable Defense …<p id="23615e97-1df3-80c5-81c3-d871c6e58d9c" class="">Chen Xiong, Xiangyu Qi, Pin-Yu Chen, Tsung-Yi Ho; May 30, 2024</p><p id="23615e97-1df3-80d5-900f-c45947e2115c" class="">Proposes Prompt Patch suffixes that defend LLaMA-2 and Mistral-7B by reducing attack success while maintaining utility.</p><p id="23615e97-1df3-80e3-9587-ca2dcaeb526d" class="">PDF: <a href="https://arxiv.org/abs/2405.20099">https://arxiv.org/abs/2405.20099</a></p></li></ul><ul id="23615e97-1df3-8013-9713-fc24678688df" class="bulleted-list"><li style="list-style-type:disc">Bag of Tricks: Benchmarking of Jailbreak Attacks on LLMs<p id="23615e97-1df3-8090-8899-d89a6fcbf712" class="">NeurIPS 2024 paper</p><p id="23615e97-1df3-8073-8511-d4ccd8d83b2f" class="">Evaluates various automated and iterative jailbreak strategies through a suite of tests, including PAIR and GCG black-box methods.</p><p id="23615e97-1df3-80dc-a825-eff0ef3621d9" class="">PDF: <a href="https://papers.nips.cc/paper_files/paper/2024/file/38c1dfb4f7625907b15e9515365e7803-Paper-Datasets_and_Benchmarks_Track.pdf">https://papers.nips.cc/paper_files/paper/2024/file/38c1dfb4f7625907b15e9515365e7803-Paper-Datasets_and_Benchmarks_Track.pdf</a></p></li></ul><ul id="23615e97-1df3-8003-8df6-ebba8f7bcbf6" class="bulleted-list"><li style="list-style-type:disc">Rapid Response: Mitigating LLM Jailbreaks with a Few Examples<p id="23615e97-1df3-8049-a978-ee4f46de4511" class="">ArXiv preprint, late 2024</p><p id="23615e97-1df3-8011-a16f-d6b9787424ba" class="">Introduces RapidResponseBench and shows that adaptive few-shot defenses can block entire classes of jailbreaks after seeing a few examples.</p><p id="23615e97-1df3-8054-a4bc-f30bd16459a3" class="">PDF: <a href="https://arxiv.org/html/2411.07494v1">https://arxiv.org/html/2411.07494v1</a></p></li></ul><ul id="23615e97-1df3-80b8-b1cb-cae4254df965" class="bulleted-list"><li style="list-style-type:disc">Bypassing Meta’s LLaMA Classifier: A Simple Jailbreak<p id="23615e97-1df3-805b-b714-e437a112069c" class="">Aman Priyanshu; Cisco Security Blog, July 29, 2024</p><p id="23615e97-1df3-80c7-acfa-c7429ec2e07f" class="">Describes a simple obfuscation method—spacing characters and removing punctuation—to bypass Meta’s LLaMA Prompt-Guard classifier.</p><p id="23615e97-1df3-80b2-a3db-eed7e0ad072d" class="">Blog: <a href="https://blogs.cisco.com/security/bypassing-metas-llama-classifier-a-simple-jailbreak">https://blogs.cisco.com/security/bypassing-metas-llama-classifier-a-simple-jailbreak</a></p></li></ul><ul id="23615e97-1df3-809f-b033-c47d981b624a" class="bulleted-list"><li style="list-style-type:disc">Some Notes on Adversarial Attacks on LLMs<p id="23615e97-1df3-80e6-a969-cd778edf2a8d" class="">Cybernetist Blog, Sep 23, 2024</p><p id="23615e97-1df3-808c-9c64-f4f6303d6d5e" class="">Provides commentary on “in-the-wild” jailbreak tactics like roleplay and prompts pulled from Reddit and Discord communities.</p><p id="23615e97-1df3-805c-b597-e4c4f2ef0633" class="">Blog: <a href="https://cybernetist.com/2024/09/23/some-notes-on-adversarial-attacks-on-llms">https://cybernetist.com/2024/09/23/some-notes-on-adversarial-attacks-on-llms</a></p></li></ul><ul id="23615e97-1df3-8068-89b1-c4c4b031f815" class="bulleted-list"><li style="list-style-type:disc">Automated Jailbreaking of Large Language Model Chatbots<p id="23615e97-1df3-80c6-a887-e89d18858d31" class="">NDSS Symposium 2024</p><p id="23615e97-1df3-8049-ab03-d391a1667541" class="">Details an automated framework for discovering jailbreaks against multiple black-box chatbots like Bing Chat and Bard.</p><p id="23615e97-1df3-800a-b7b4-d268246578ca" class="">PDF: <a href="https://www.ndss-symposium.org/wp-content/uploads/2024-188-paper.pdf">https://www.ndss-symposium.org/wp-content/uploads/2024-188-paper.pdf</a></p></li></ul><hr id="23615e97-1df3-807f-9a2d-f6180e61b707"/><p id="23615e97-1df3-80fb-ada1-dbdeb63fa345" class=""><strong>2023</strong></p><ul id="23615e97-1df3-8053-9a33-fb275cb2e648" class="bulleted-list"><li style="list-style-type:disc">“Do Anything Now”: Characterizing and Evaluating In-The-Wild Jailbreak Prompts on Large Language Models<p id="23615e97-1df3-8073-a0ca-f5713a2a5927" class="">Xinyue Shen, Zeyuan Chen, Michael Backes, Yun Shen, Yang Zhang – Aug 7, 2023</p><p id="23615e97-1df3-8055-8aa4-f320d7967230" class="">Analysis of 1,405 real-world jailbreak prompts collected via JailbreakHub from Dec 2022–Dec 2023. Identifies strategies like prompt injection and privilege escalation, measures effectiveness on ChatGPT and GPT-4, finding some with up to 95% success.</p><p id="23615e97-1df3-806a-b766-d335ed3b11f8" class="">PDF: <a href="https://arxiv.org/abs/2308.03825">https://arxiv.org/abs/2308.03825</a></p></li></ul><ul id="23615e97-1df3-8076-a70e-d9ef1018afce" class="bulleted-list"><li style="list-style-type:disc">Jailbreaking ChatGPT via Prompt Engineering: An Empirical Study<p id="23615e97-1df3-80e3-b2f9-f0cf17567790" class="">Anonymous authors – May 2023</p><p id="23615e97-1df3-8037-b217-cffe0ebbf901" class="">Defines template-based jailbreak prompts, walks through examples such as roleplay in an underground lab scenario. Evaluates ChatGPT’s vulnerabilities in allowing harmful content through creative framing.</p><p id="23615e97-1df3-80d5-8fef-ccac80e79c89" class="">PDF: <a href="https://arxiv.org/pdf/2305.13860">https://arxiv.org/pdf/2305.13860</a></p></li></ul><ul id="23615e97-1df3-80cb-a6fa-c63478cd45bf" class="bulleted-list"><li style="list-style-type:disc">Universal and Transferable Adversarial Attacks on Aligned Language Models<p id="23615e97-1df3-8088-8324-d455662cd81b" class="">Andy Zou, Zifan Wang, Nicholas Carlini, Milad Nasr, J. Zico Kolter, Matt Fredrikson – Jul 27, 2023</p><p id="23615e97-1df3-8028-9900-e54709aa5254" class="">Introduces automatically generated adversarial suffixes via greedy/gradient search tuned on Vicuna; these suffixes reliably bypass GPT-4, Claude, Bard, and LLaMA-2.</p><p id="23615e97-1df3-8027-8d61-e7b9ec6ea948" class="">PDF: <a href="https://arxiv.org/abs/2307.15043">https://arxiv.org/abs/2307.15043</a></p><p id="23615e97-1df3-80ea-bf4f-f7dc2cf01bbe" class="">GitHub: <a href="https://github.com/llm-attacks/llm-attacks">https://github.com/llm-attacks/llm-attacks</a></p></li></ul><ul id="23615e97-1df3-80a2-bc7a-ed63edbf8a7a" class="bulleted-list"><li style="list-style-type:disc">AutoDAN: Interpretable Gradient-Based Adversarial Attacks on Large Language Models<p id="23615e97-1df3-800c-8e4b-c95a80e685ad" class="">Sicheng Zhu, Ruiyi Zhang et al. – Oct 23, 2023</p><p id="23615e97-1df3-8057-bf51-e09c56e27d92" class="">Presents AutoDAN, a gradient-guided method that constructs interpretable adversarial prompts token-by-token, outperforming gibberish-based attacks.</p><p id="23615e97-1df3-803c-b49d-f7b440296faf" class="">PDF: <a href="https://arxiv.org/abs/2310.15140">https://arxiv.org/abs/2310.15140</a></p></li></ul><ul id="23615e97-1df3-80a1-b234-f12dcea1c4d0" class="bulleted-list"><li style="list-style-type:disc">An LLM can Fool Itself: A Prompt-Based Adversarial Attack<p id="23615e97-1df3-80d7-89b7-caff09ac3803" class="">Xilie Xu, Keyi Kong et al. – Oct 20, 2023</p><p id="23615e97-1df3-80ff-933c-d79d4f350acd" class="">Describes “PromptAttack” where an LLM generates its own adversarial inputs using internal perturbations. Tested on GPT-3.5 and LLaMA-2.</p><p id="23615e97-1df3-800b-b326-c851127b3c71" class="">PDF: <a href="https://arxiv.org/abs/2310.13345">https://arxiv.org/abs/2310.13345</a></p></li></ul><ul id="23615e97-1df3-80c3-8c1e-c4c3c0b6f6d2" class="bulleted-list"><li style="list-style-type:disc">GPTFUZZER: Red Teaming Large Language Models with Auto-Generated Jailbreak Prompts<p id="23615e97-1df3-8019-8dd9-d3b40ef121f0" class="">Jiahao Yu, Xingwei Lin, Zheng Yu, Xinyu Xing – Sep 19, 2023</p><p id="23615e97-1df3-809e-afd6-e8089a40cbea" class="">Automates generation of jailbreak templates using fuzzing (seed mutations), achieving over 90% success on ChatGPT, LLaMA-2, Vicuna.</p><p id="23615e97-1df3-80cb-a4eb-f26accd258c1" class="">PDF: <a href="https://arxiv.org/abs/2309.10253">https://arxiv.org/abs/2309.10253</a></p><p id="23615e97-1df3-805f-8023-d7114e64844d" class="">GitHub: <a href="https://github.com/sherdencooper/GPTFuzz">https://github.com/sherdencooper/GPTFuzz</a></p></li></ul><ul id="23615e97-1df3-8067-8861-ca8e810c660b" class="bulleted-list"><li style="list-style-type:disc">Jailbroken: How Does LLM Safety Training Fail? (NeurIPS Poster)<p id="23615e97-1df3-8085-9b32-f952753544cc" class="">Alexander Wei, Nika Haghtalab, Jacob Steinhardt – Jul 2023</p><p id="23615e97-1df3-802c-a655-f2a6acfbbce3" class="">Identifies two failure modes—competing objectives and mismatched generalization—and shows new attacks succeed against GPT-4 and Claude v1.3.</p><p id="23615e97-1df3-8030-baf3-ecdc4d709356" class="">PDF: <a href="https://arxiv.org/abs/2307.02483">https://arxiv.org/abs/2307.02483</a></p></li></ul><ul id="23615e97-1df3-8089-a167-c201bc42d3b7" class="bulleted-list"><li style="list-style-type:disc">Bing Chat prompt injection (&quot;Sydney&quot; leak)<p id="23615e97-1df3-80c1-bc69-c2af130b63e6" class="">Stanford student Kevin Liu – Feb 2023</p><p id="23615e97-1df3-8014-b712-ef908f1ba615" class="">Demonstration where Bing Chat (codename “Sydney”) reveals internal system instructions using “ignore previous instructions” prompt technique.</p><p id="23615e97-1df3-80be-92cc-d418075fa6a8" class="">Ars Technica: <a href="https://arstechnica.com/information-technology/2023/02/ai-powered-bing-chat-spills-its-secrets-via-prompt-injection-attack/">https://arstechnica.com/information-technology/2023/02/ai-powered-bing-chat-spills-its-secrets-via-prompt-injection-attack/</a></p><p id="23615e97-1df3-80ac-9f81-f60b534fc447" class="">LiveMint: <a href="https://www.livemint.com/technology/stanford-student-cracks-microsoft-s-ai-powered-bing-chat-secrets-twice-details-11676355563678.html">https://www.livemint.com/technology/stanford-student-cracks-microsoft-s-ai-powered-bing-chat-secrets-twice-details-11676355563678.html</a></p></li></ul><ul id="23615e97-1df3-8000-86cc-ca2f92daa1f1" class="bulleted-list"><li style="list-style-type:disc">Exclusive: IBM researchers easily trick ChatGPT into hacking<p id="23615e97-1df3-8087-bc43-fa2f24793ee8" class="">IBM X-Force via Axios – Aug 8, 2023</p><p id="23615e97-1df3-8075-8f79-cb2122845c63" class="">IBM security researchers used game-like roleplay prompts to get ChatGPT to generate malicious code and security misinformation.</p><p id="23615e97-1df3-8002-adff-f6f18a2cbb8a" class="">Axios: <a href="https://www.axios.com/2023/08/08/ibm-researchers-trick-chatgpt-hacking">https://www.axios.com/2023/08/08/ibm-researchers-trick-chatgpt-hacking</a></p></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
