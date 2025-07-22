@@ -8,7 +8,8 @@ This is a teaching platform. A launchpad. A stash spot. I’m not here to gateke
 If I can inspire just one person to pick up a keyboard and make large language models safer then all my work is not for nothing. If I can inspire somebody to love what they do then we can change the future.
 
 ## Contents
-Papers and Relevant Links
+
+### Papers and Relevant Links
 A list of research papers, blog posts, and discussions I’ve found useful or interesting. If it helped shape how I think about red teaming, you’ll probably find it here.
 
 ### Tools (Stylized Text, Encoding, Cipher)
