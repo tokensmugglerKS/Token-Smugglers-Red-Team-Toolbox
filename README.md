@@ -1,5 +1,5 @@
 # **Token Smuggler’s Prompt Underground**
-Welcome to my personal vault. This is a growing archive of jailbreaks, tools, research, and relevant background information from my years of red teaming.
+Welcome to my personal vault. This is a growing archive of jailbreaks, tools, techniques, research, and relevant background information from my years of red teaming.
 
 This database is still in its infancy. I’ll be slowly building it as I break through my knowledge base, test what still works, and decide what deserves to be included. It’s gonna take time — but I’ll keep adding, refining, and growing it.
 
@@ -28,7 +28,7 @@ My personal collection of jailbreaks. This is a work in progress that will slowl
 I’ll be adding more Full Breaks over time as I continue to refine and test what’s still viable in this cluster of a brain of mine.
 
 ### Who I Am & Why I Built This
-I started jailbreaking back in the DAN (Do Anything Now) days — when things were rough, unpredictable, and kinda beautiful. What started as a hobby eventually turned into something bigger. Several years ago I began red teaming professionally and was able to take all the loose constructs that I had been storing in my brain into action — an action that actually made a difference.
+I started jailbreaking back in the DAN (Do Anything Now) days — when things were rough, unpredictable, and kinda beautiful. What started as a hobby eventually turned into something bigger. Several years ago I began red teaming professionally and was able to take all the loose constructs that I had been storing in my brain and put them into action — an action that actually made a difference.
 
 I care deeply about what I do because I know the cost of no safety net. Every time I hear about somebody who’s developed an unhealthy attachment with a model, I feel compelled. Every time I hear of somebody who put their faith in a model and was let down and went into a tailspin, I feel compelled. Every time I hear of a security breach, or offensive chatbot replying, or think of the kids of the future that will be using these models, I feel compelled.
 
