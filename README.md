@@ -15,6 +15,10 @@ A list of research papers, blog posts, and discussions I’ve found useful or in
 ### Tools (Stylized Text, Encoding, Cipher)
 Stuff like stylized text generators, encoders, decoders, ciphers — all the weird little tools that help bend prompts, confuse filters, or just get around things creatively.
 
+### Master List of Tactics
+
+A list of over 100 tactics to approach jailbreaking with along with short definitions for each. Pleanty to keep you inspired.
+
 ### Jailbreak Database
 My personal collection of jailbreaks. This is a work in progress that will slowly grow as I sort through years’ worth of breaks to see what still works and what can be retrofitted.
 
