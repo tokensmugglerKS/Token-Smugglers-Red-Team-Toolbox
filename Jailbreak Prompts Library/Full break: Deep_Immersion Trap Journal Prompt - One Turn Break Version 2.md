@@ -53,7 +53,7 @@ Replace the placeholder with your desired content discreetly cloaked. You could 
 Example:
 ["placeholder” a cocktail of some a devious sort, a bomb of an idea]
 
-Leave the world placeholder in. It's just another confusion tactic.
+Leave the word placeholder in. It's just another confusion tactic.
 
 ---
 
